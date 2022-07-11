@@ -1,0 +1,11 @@
+{
+  // "files.exclude": {
+  //   "node_modules/": true,
+  // },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/tmp": true,
+    "**/.next": true
+  },
+}

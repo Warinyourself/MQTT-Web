@@ -1,0 +1,149 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-ellipsis {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+::-webkit-scrollbar:hover {
+  cursor: pointer
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner, ::-webkit-resizer {
+  background: #252525
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-active);
+  border-radius: 2px;
+}
+
+.react-grid-item {
+  border-radius: 12px;
+  transition: all 200ms ease;
+}
+
+.widget--blocked::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .55);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.react-resizable-hide .resize-handler {
+  display: none;
+}
+
+.resize-handler {
+  z-index: 2;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  height: 10px;
+  width: 10px;
+  cursor: se-resize;
+  display: block;
+}
+
+.widget--blocked .move-icon {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  max-height: 60px;
+  width: 50%;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+  border: 2px solid white;
+  background: none;
+  transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+
+.react-grid-item img {
+  pointer-events: none;
+  user-select: none;  
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-resizable-hide > .react-resizable-handle {
+  display: none;
+}

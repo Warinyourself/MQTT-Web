@@ -1,0 +1,17 @@
+.connection-indicator {
+  color: white;
+  font-size: 8px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 calc(1em / 2) calc(1em / 6) currentColor;
+}
+
+.connection-indicator--success {
+  color: #32ff24;
+}
+
+.connection-indicator--close {
+  opacity: 0.4
+}
